@@ -9,6 +9,11 @@ mongoose.connect('mongodb+srv://shaniasad:secre7@cluster0.vp4fu.mongodb.net/?ret
 
 const app = express()
 
+const origin = '*' // insert your origin here
+server.use(cors({
+    origin: origin
+}));
+
 app.use(passport.initialize())
 
 app.use('/player', passport.authenticate('jwt', {session: false}), playerRoute);
