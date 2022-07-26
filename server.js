@@ -24,6 +24,6 @@ app.use((req, res) => {
     res.status(404).send("<h1> Endpoint not found.</h1>")
 })
 
-app.listen(3000, () => {
-    console.log('server listening on http://localhost:3000.')
+app.listen(8000, () => {
+    console.log('server listening on http://localhost:8000.')
 })
